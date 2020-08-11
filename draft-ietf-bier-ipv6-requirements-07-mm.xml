@@ -240,8 +240,8 @@ Verizon Inc.
         
       </section>
       
-      <section title="IPv6 Model">
-      <t>The second conceptual model is a IPv6 Model that integrates BIER as part of the IPv6 data plane, 
+      <section title="IPv6-Integrated Model">
+      <t>The second conceptual model is an IPv6-Integrated Model that integrates BIER as part of the IPv6 data plane, 
       making it a "Layer-3 BIER" approach.</t>
       <t><figure align="left">
           <artwork><![CDATA[      
@@ -292,7 +292,7 @@ Verizon Inc.
        <t>BIERin6 <xref target="I-D.zhang-bier-bierin6"/>.</t>
        </list></t>
      <t></t>
-     <t>IPv6 Model approaches include: </t>
+     <t>IPv6-Integrated Model approaches include: </t>
        <t><list style="">
        <t>BIER-over-IPv6 <xref target="I-D.pfister-bier-over-ipv6"/>.</t>
        <t>BIERv6 <xref target="I-D.xie-bier-ipv6-encapsulation"/>.</t>
