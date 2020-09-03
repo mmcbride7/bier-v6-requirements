@@ -31,7 +31,7 @@
       </address>
     </author>
     
-       <author fullname="Xuesong" initials="X" surname="Geng">
+       <author fullname="Xuesong Geng" initials="X" surname="Geng">
       <organization>Huawei</organization>
 
       <address>
@@ -225,7 +225,7 @@
         <t>In this model, BIER works as part of the IPv6 data plane. 
         The BFIR and BFERs work as IPv6 (P2MP) tunnel endpoints, and BFRs 
         work as IPv6 segment endpoints. The BIER header is processed on each segment endpoint and there 
-        is no decapsulation, or re-encapsulation, on the sending or receiving sides of these IPv6 tunnels. </t>
+        is no decapsulation, or re-encapsulation, on the sending or receiving sides of the segment endpoint. </t>
         
         <t>This model typically needs an extension header, in IPv6 header, to carry the BIER header. 
         The BIER header will be encoded into the IPv6 extension header, and processing of 
@@ -233,7 +233,7 @@
          The IPv6 source address is the BIER packet source-origin identifier, and is unchanged through the 
          BIER domain from BFIR to BFERs. </t>
          
-         <t>General considerations of this model is to use the IPv6 extension capabilities to enable the BIER function, 
+         <t>General considerations of this model is to use the IPv6 capabilities, in addition to the normal BIER function, 
          to smoothly facilitate new requirements that may emerge in an IPv6 network.</t>
          
       </section>
@@ -320,9 +320,9 @@
       
       <section title="Support Fragmentation">
       <t>There are some cases where the Fragmentation/Assembly function is needed for BIER to work in an IPv6 network. </t>
-      <t>For example, a customer IPv6 multicast packet may be 1280 bytes and is required to be transported through an IPv6 network using BIER, 
-         and the BIER-MTU of the IPv6 network is about 1300 bytes. Every link of the domain is no less than the IPv6-required 
-         1280 bytes <xref target="RFC8200"/>, but is less than the required space to encapsulate the IPv6 c-multicast packet using BIER.
+      <t>For example, a customer IPv6 multicast packet may be 1280 bytes and is required to be transported through an IPv6 network using BIER.
+         Every link of the IPv6 network is no less than the IPv6-required 1280 bytes <xref target="RFC8200"/>, 
+         but the size of the payload that can be encapsulated in BIER (BIER-MTU) is less than 1280 bytes.
          In this case, it is not the appropriate action for a BFIR to drop the packet and advertise an MTU to the source.
          Instead, the appropriate action for a BFIR is to fragment the packet, and BIER imposing and processing should apply, in 
          sequence, to each fragment <xref target="RFC8296"/>.
